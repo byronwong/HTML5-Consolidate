@@ -1,0 +1,10 @@
+{
+  "name": "handlebars-js",
+  "version": "1.0.0",
+  "author": "Byron Wong",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.17.6",
+    "gulp": "^3.9.1"
+  }
+}

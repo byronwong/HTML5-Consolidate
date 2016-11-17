@@ -1,0 +1,35 @@
+/* Custom Styles */
+/* Use this for global styles */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*---*/
+
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.mini-nav {
+  display: block;
+  width: 100%;
+  list-style: none;
+}
+
+.mini-nav li {
+  float: left;
+}
+
+.mini-nav li a {
+  display: block;
+  width: 100%;
+  padding: 8px 16px 8px 0;
+}
+
+.content-container {
+  width: 100%;
+}
