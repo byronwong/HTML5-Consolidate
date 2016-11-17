@@ -10,6 +10,10 @@
 					{
 						path : 'index.html',
 						link : 'home'
+					},
+					{
+						path : 'nextpage.html',
+						link : 'next page'
 					}
 				]
 			});
