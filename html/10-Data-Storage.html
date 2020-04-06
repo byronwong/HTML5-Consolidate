@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Data Storage</title>
+    <link href="../CSS/base.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+
+    <style>
+        #dataForm {
+            padding: 15px;
+            border: 1px solid #333;
+        }
+
+        #data {
+            padding: 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #333;
+        }
+
+        input, textarea {
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="main-nav"></nav>
+    <section>
+        <h1>Data Storage</h1>
+        <article>
+            <p>HTML 5 data storage is and extension of the cookie system</p>
+            <a href="https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet">Security Documentation</a>
+            <p>Two types of storage session and local</p>
+            <a href="http://www.w3schools.com/html/html5_webstorage.asp">Local storage documentation</a>
+            <h2>Local storage</h2>
+            <p>
+                <ul>
+                    <li>Tied to a window or tab</li>
+                    <li>Data stored as items</li>
+                    <li>items are key value pairs</li>
+                    <li>setItem([key],[value])</li>
+                </ul>
+            </p>
+
+            <div id="form-section">
+                <form name="dataForm" id="dataForm">
+                    <label for="key">Key:</label><br>
+                    <input type="text" id="key" name="key" /><br>
+
+                    <textarea name="value" id="value"></textarea><br>
+
+                    <input type="button" id="save" value="save" /><br>
+                    <input type="button" id="retrieve" value="retrieve" /><br>
+                    <input type="button" id="delete" value="delete" /><br>
+                    <input type="button" id="review" value="review" /><br>
+                    <input type="button" id="clear" value="clear" /><br>
+                </form>
+            </div>
+            <div id="data">
+                no data
+            </div>
+        </article>
+    </section>
+
+    <script src="../JS/10-data-storage.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

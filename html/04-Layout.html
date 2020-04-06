@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Layout and structure</title>
+    <link href="../CSS/base.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+</head>
+<body>
+    <!-- Layout -->
+    <section>
+        <nav id="main-nav"></nav>
+        <h1>HTML 5 Structure Elements</h1>
+        <hr />
+        <article>
+            <h2>Layout elements</h2>
+            <p><code>&lt;header&gt;</code> Defines the Masthead / title area - usually the first element on a page</p>
+            <p><code>&lt;nav&gt;</code> Defines the Masthead / title area</p>
+            <p><code>&lt;article&gt;</code> Defines self contains documents e..g blog posts, emails, comments</p>
+            <p><code>&lt;footer&gt;</code> Defines the Footer area</p>
+            <p><code>&lt;aside&gt;</code> Defines the Sidebar area, pull quotes, infromation is related by not part of main flow</p>
+            <p><code>&lt;section&gt;</code> Defines the Generic area, or subject areas</p>
+
+
+            <h2>HTML 5 figure </h2>
+            <figure>
+                <img style="background-color:#999; width:400px; height:200px;" />
+                <figcaption>This is a caption</figcaption>
+            </figure>
+            <pre>
+            <code>
+            &lt;figure&gt;
+                &lt;img style="background-color:#999; width:400px; height:200px;" /&gt;
+                &lt;figcaption&gt; This is a caption &lt;/figcaption&gt;
+            &lt;/figure&gt;
+            </code>
+            </pre>
+
+            <h2>HTML 5 - Creating collapsible details</h2>
+            <details open>
+                <!-- open is optional - makes the details open on load -->
+                <summary>Summary title</summary>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                    sollicitudin augue ex. Donec efficitur vitae massa at sodales.
+                    Donec et ornare diam. Suspendisse ac libero eu elit ultrices
+                    dignissim a quis odio. Proin non enim tincidunt, aliquam sem a,
+                    condimentum urna.
+                </p>
+            </details>
+            <pre>
+                <code>
+            &lt;details open&gt;
+                &lt;summary&gt; Chapter title &lt;/summary&gt;
+                &lt;p&gt; 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur 
+                    sollicitudin augue ex. Donec efficitur vitae massa at sodales. 
+                    Donec et ornare diam. Suspendisse ac libero eu elit ultrices 
+                    dignissim a quis odio. Proin non enim tincidunt, aliquam sem a, 
+                    condimentum urna. 
+                &lt;/p&gt;
+            &lt;/details&gt;
+                </code>
+            </pre>
+            <a href="http://www.w3schools.com/tags/tag_details.asp">Example</a>
+        </article>
+
+    </section>
+<script src="js/scripts.js"></script>
+</body>
+</html>

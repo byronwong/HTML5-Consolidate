@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Text Markup</title>
+        <link href="../CSS/base.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    </head>
+
+    <body>
+        <nav id="main-nav"></nav>
+        <h1 id="main-header">HTML 5 NOTES <a href="https://html.spec.whatwg.org/multipage/introduction.html#introduction">Spec</a></h1>
+        <!-- Text -->
+        <section>
+            <h1>Text Markup</h1>
+            <hr>
+            <article>
+                <h2>Paragraph, Breaks and Spaces</h2>
+                <p><code>&lt;code&gt; See code...</code></p>
+                <p><code>&lt;p&gt; paragraph</code></p>
+                <p><code>&lt;br&gt; break line</code></p>
+                <p><code>&lt;hr&gt; horizonal rule</code> - controversal use - tag defines a thematic break</p>
+                <p><code>&lt;abbr&gt; hover over: <abbr title="abbreviation">abbr</abbr> to see the abbreviation</code></p>
+
+                <h2>Phrase Elements</h2>
+                <p><code>&lt;em&gt;</code> <em>Emphasize</em> - use this to subtly change the meaning of the statment</p>
+                <p><code>&lt;strong&gt;</code> <strong>Strong</strong> - indecates importantce see "b" tag</p>
+                <p><code>&lt;dfn&gt;</code> <dfn>Define a term</dfn></p>
+                <p><code>&lt;code&gt;</code> <code>Code Listings</code></p>
+                <p><code>&lt;samp&gt;</code> <samp>Sample</samp> - tag is a phrase tag. It defines sample output from a computer
+                    program</p>
+                <p><code>&lt;kbd&gt;</code> <kbd>Keyboard</kbd>- Keyboard input</p>
+                <p><code>&lt;var&gt;</code> <var>Variables</var></p>
+
+                <h2>Font Markup Elements</h2>
+                <p><code>&lt;b&gt;</code> <b> Bold </b> -indicates bold without importance see "strong" tag - According to the
+                    HTML 5 specification, the &lt;b&gt; tag should be used as a LAST resort when no other tag is more appropriate.
+                    <a href="http://www.w3schools.com/tags/tag_b.asp">documentation</a> </p>
+                <p><code>&lt;i&gt;</code> <i> Italic </i> - use this to show a technical term, name or a thought</p>
+                <p><code>&lt;u&gt;</code>
+                    <u> Underline </u>
+                </p>
+                <p><code>&lt;sub&gt;</code> This is a <sub> subscript </sub> </p>
+                <p><code>&lt;sup&gt;</code> This is a <sup> superscript </sup> </p>
+                <p><code>&lt;small&gt;</code> This is <small> small </small> - no longer means small text but for "small print
+                    in legal documents" <a href="http://www.w3schools.com/tags/tag_small.asp">documentation</a></p>
+                <p><code>&lt;s&gt;</code>
+                    <s> Strikeout </s> - tag specifies text that is no longer correct, accurate or relevant <a href="http://www.w3schools.com/tags/tag_s.asp">documentation</a></p>
+                <p><code>&lt;del&gt;</code>
+                    <del> Delete </del>
+                </p>
+
+                <h2>Mark - Text Highlighting Elements</h2>
+                <code>&lt;mark&gt;</code> Mauris hendrerit
+                <mark>lectus</mark> sit amet magna gravida tempus.
+
+                <h2>Time - provides date/time in universal format <a href="http://www.w3schools.com/tags/tag_time.asp">documentation</a></h2>
+                <p><code>&lt;time datetime="year-month-dayT(time)-timezone"&gt;</code>
+                    <time datetime="2015-01-10T13:30-5:00"></time>
+                </p>
+                <p>The "time" tag defines a human-readable date/time. This element can also be used to encode dates and times
+                    in a machine-readable way so that user agents can offer to add birthday reminders or scheduled events
+                    to the user's calendar, and search engines can produce smarter search results. </p>
+                <p>see code...</p>
+
+                <h2>Quotes Elements (see code for styles)</h2>
+                <style>
+                    <!-- For cross lang --> :lang(en)>q {
+                        quotes: '“' '”' '‘' '’';
+                    }
+
+                     :lang(en-GB)>q {
+                        quotes: '‘' '’' '“' '”';
+                    }
+
+                     :lang(fr)>q {
+                        quotes: '«' '»' '“' '”';
+                    }
+
+                     :lang(de)>q {
+                        quotes: '„' '“' '‚' '‘';
+                    }
+                </style>
+                <p><code>&lt;q&gt; tag defines a short quotation. see code...</code><a href="http://www.w3schools.com/tags/tag_q.asp">Example</a></p>
+                <p lang="fr"><code>&lt;p lang="fr"&gt;</code> Mauris hendrerit <q>lectus sit amet</q> magna gravida tempus. </p>
+                <p lang="en"><code>&lt;p lang="en"&gt;</code> Mauris hendrerit <q>lectus sit amet</q> magna gravida tempus. </p>
+                <p lang="en-GB"><code>&lt;p lang="en-GB"&gt;</code> Mauris hendrerit <q>lectus sit amet</q> magna gravida tempus. </p>
+                <p lang="de"><code>&lt;p lang="de"&gt;</code> Mauris hendrerit <q>lectus sit amet</q> magna gravida tempus. </p>
+
+                <h2>Quotes Elements</h2>
+                <code>&lt;blockquote&gt;</code>
+                <p>Here is a quote from WWF's website:</p>
+
+                <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100
+                    countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+                </blockquote>
+
+                <h2>Exploring preformatted text</h2>
+                <pre>
+                          This text is
+                        preformatted
+                     and should  be
+                   displayed in a
+                     particular way
+                       and shape without any
+                         reformatting
+                       by
+                     the
+                   browser.
+                     The
+                       format
+                           is the
+                                poetry.
+	            </pre>
+
+                <h2>HTML Preformatted Text</h2>
+                <pre>
+	        int main( int argc, char ** argv ) {
+		        printf(&quot;Hello, World!\n&quot;);
+		        return 0;
+	        }
+	        </pre>
+
+                <pre>
+	            &lt;html&gt;
+	            &lt;head&gt;
+		            &lt;meta charset=&quot;UTF-8&quot; /&gt; 
+		            &lt;title&gt;
+			            HTML Preformatted Text
+		            &lt;/title&gt;
+	            &lt;/head&gt;
+	            &lt;body&gt;
+	            &lt;h1&gt;
+		            HTML Preformatted Text
+	            &lt;/h1&gt;
+	            &lt;p&gt;
+		            Hello, World!
+	            &lt;/p&gt;
+	            &lt;/body&gt;
+	            &lt;/html&gt;
+	        </pre>
+
+                <h2>List Elements (see code...)</h2>
+                <h2><code>&lt;ol&gt; Ordered list</code></h2>
+                <p>the <code>&lt;ol&gt;</code> tag now has two new attributes: </p>
+                <p>the <code>&lt;ol start="5"&gt;</code> number to start the list. Documentation <a href="http://www.w3schools.com/TAgs/att_ol_start.asp">here...</a></p>
+                <p>the <code>&lt;ol reverse&gt;</code> reverses the listing, NOTE: not yet fully implemented, Documentation
+                    <a href="http://www.w3schools.com/TAgs/att_ol_reversed.asp">here...</a></p>
+                <ol>
+                    <li> One </li>
+                    <li> Two </li>
+                    <li> Three </li>
+                </ol>
+
+                <h2><code>&lt;ul&gt; Unordered list</code></h2>
+                <ul>
+                    <li> Four </li>
+                    <li> Five </li>
+                    <li> Six </li>
+                </ul>
+
+                <h2><code>&lt;dl&gt;</code> Description list</h2>
+                <p>A description list, with terms and descriptions</p>
+                <p><code>&lt;dl&gt;</code> description list wrapper</p>
+                <p><code>&lt;dt&gt;</code> description term/name</p>
+                <p><code>&lt;dl&gt;</code> descritpion (describes each term/name)</p>
+
+                <dl>
+                    <dt>One</dt>
+                    <!-- terms -->
+                    <dd>The first non-zero number.</dd>
+
+                    <dt>Two</dt>
+                    <dd>The number after one.</dd>
+
+                    <dt>Three</dt>
+                    <dd>To get ready.</dd>
+
+                    <dt>Four</dt>
+                    <dd>Now Go, Cat, Go!</dd>
+                </dl>
+                <a href="http://www.w3schools.com/tags/tag_dl.asp">Documentation</a>
+
+                <h2>Forcing text direction</h2>
+                <p><code>See code...</code></p>
+                <p><code>&lt;bdo dir="ltr"&gt;Content goes in here...</code><code>&lt;/bdo&gt;</code><span dir="ltr"> Content goes in here...</span></p>
+                <p><code>&lt;bdo dir="rtl"&gt;Content goes in here...</code><code>&lt;/bdo&gt;</code><bdo dir="rtl"> Content goes in here...</bdo></p>
+
+                <p>"bdo" bidirection overide, "rtl" right-to-left, "ltr" right-to-left</p>
+
+                <h2>Word-break opportunities</h2>
+                &shy;
+                <!-- soft hyphen -->
+                <p><code>& shy ;</code> <b> HTML entity </b> </p>
+                <p>httpstackov&shy;erflowcomque&shy;stions1&shy;8676807incon&shy;sistentf&shy;ontsizesc&shy;rossbrowserwithbothpxandem</p>
+                <wbr />
+                <!-- hidden word break -->
+                <p><code>&lt;wbr&gt;</code> <b> HTML tag method </b> </p>
+                <p>httpstackov
+                    <wbr />erflowcomque
+                    <wbr />stions1
+                    <wbr />8676807incon
+                    <wbr />sistentf
+                    <wbr />ontsizesc
+                    <wbr />rossbrowserwithbothpxandem</p>
+
+                <h2>Annotating East Asian languages</h2>
+                <p lang="ja" style="font-size: 150%">
+                    <!-- "rp" if browser does not support character -->
+                    <!--
+                <ruby>
+                    &#28450; <rp>(</rp><rt>&#12363;&#12435;</rt><rp>)</rp>
+                    &#23383; <rp>(</rp><rt>&#12376;</rt><rp>)</rp>
+                </ruby>
+                -->
+                    <ruby>
+                        漢
+                        <rp>(</rp>
+                        <rt>かん</rt>
+                        <rp>)</rp>
+                        字
+                        <rp>(</rp>
+                        <rt>じ</rt>
+                        <rp>)</rp>
+                    </ruby>
+                </p>
+
+                <p>
+                    In this example, each ideograph in the simplified Chinese text is annotated with its pinyin reading.
+                </p>
+
+                <p lang="zh-CN" style="font-size: 150%">
+                    <!-- "rp" if browser does not support character -->
+                    <!--
+                <ruby>
+                    &#27721; <rp>(</rp><rt>h&agrave;n</rt><rp>)</rp>
+                    &#23383; <rp>(</rp><rt>z&igrave;</rt><rp>)</rp>
+                </ruby>
+                -->
+
+                    <ruby>
+                        汉
+                        <rp>(</rp>
+                        <rt>hàn</rt>
+                        <rp>)</rp>
+                        字
+                        <rp>(</rp>
+                        <rt>zì</rt>
+                        <rp>)</rp>
+                    </ruby>
+                </p>
+
+                <h2>Other - changed elements</h2>
+                <p><code>&lt;address&gt;</code> should be used for contact details of the authour and not postal address, unless
+                    it is part of content details. see documentation <a href="http://www.w3schools.com/tags/tag_address.asp">here...</a>                    You can now have multiple addresses in a document one for each article</p>
+                <p><code>&lt;cite&gt;</code> Note: should not use this to a name of a speaker. More for marking the publication
+                    being cited, documentation <a href="http://www.w3schools.com/tags/tag_cite.asp">here...</a></p>
+            </article>
+        </section>
+        <script src="js/scripts.js"></script>
+    </body>
+
+</html>

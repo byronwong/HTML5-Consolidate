@@ -33,3 +33,8 @@ h1 {
 .content-container {
   width: 100%;
 }
+
+ul > li {
+  font-size: 12px;
+  line-height: 100%;
+}

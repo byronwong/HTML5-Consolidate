@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Media Elements</title>
+    <link href="../CSS/base.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+</head>
+<body>
+    <nav id="main-nav"></nav>
+
+    <!-- Media -->
+    <section>
+        <h1>HTML 5 Media Elements</h1>
+        <hr />
+        <article>
+            <h2>Embedding audio</h2>
+            <p>See code for manual control...</p>
+            <audio id="audio1" controls loop>
+                <!-- controls - allows html 5 options, also has loop item -->
+                <source /> <!-- different browsers support diffect audio files -->
+            </audio>
+            <form>
+                <input type="button" value="Play" onclick="play()" />
+                <input type="button" value="Pause" onclick="pause()" />
+                <input type="button" value="Rewind" onclick="rewind()" />
+            </form>
+            <script>
+                // For manual control of the audio player
+                var audio;
+                function init() {
+                    audio = document.getElementById('audio1');
+                }
+                function play() { audio.play(); }
+                function pause() { audio.pause(); }
+                function rewind() { audio.currentTime = 0; }
+                window.onload = init;
+            </script>
+            <a href="http://www.w3schools.com/html/html5_audio.asp">Documentation</a>
+
+            <pre> <!-- HTML Example -->
+            <code>
+    &lt;audio controls&gt;
+        &lt;source src="horse.ogg" type="audio/ogg"&gt;
+        &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+        Your browser does not support the audio element.
+    &lt;/audio&gt;
+        </code>
+            </pre>
+
+            <h2>Embedding video</h2>
+            <p><a href="http://www.w3schools.com/html/html5_video.asp">Documentation</a></p>
+            <video id="video1" width="480" height="250" controls>
+                <source src="media/video.m4v" type="video/mp4" />
+                <source src="media/video.webm" type="video/webm" />
+                <source src="media/video.ogg" type="video/ogg" />
+                <p> Your browser does not support the HTML5 video feature. </p>
+            </video>
+            <p>See code...</p>
+            <form>
+                <!-- video control UI -->
+                <input type="button" value="Play" onclick="play()" />
+                <input type="button" value="Pause" onclick="pause()" />
+                <input type="button" value="Rewind" onclick="rewind()" />
+            </form>
+
+            <pre> <!-- HTML Example -->
+            <code>
+    &lt;video controls id="video1" width="480" height="250" poster="colour.jpg"&gt;
+        &lt;source src="horse.ogg" type="audio/ogg"&gt;
+        &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+        Your browser does not support the audio element.
+    &lt;/video&gt;
+        </code>
+            </pre>
+
+            <script>
+                // video manual controls logic
+                var video;
+                function init() {
+                    video = document.getElementById('video1');
+                }
+                function play() { video.play(); }
+                function pause() { video.pause(); }
+                function rewind() { video.currentTime = 0; }
+                window.onload = init;
+            </script>
+        </article>
+    </section>
+<script src="js/scripts.js"></script>
+</body>
+</html>

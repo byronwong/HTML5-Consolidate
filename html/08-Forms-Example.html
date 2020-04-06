@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Form Example</title>
+    <link href="../CSS/base.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+</head>
+<body>
+    <nav id="main-nav"></nav>
+    <p>Hello!</p>
+    <form id="myform">
+        <!-- Date -->
+        <label for="date-input">Please choose a date</label>
+        <input type="date" id="date-input" />
+        <br />
+
+        <!-- Time -->
+        <label for="time-input">Please enter a time</label>
+        <input type="time" id="time-input" />
+        <br />
+
+        <!-- Month -->
+        <label for="month-input">Please enter a month</label>
+        <input type="month" id="month-input" />
+        <br />
+
+        <!-- Week -->
+        <label for="week-input">Please enter a week</label>
+        <input type="week" id="week-input" />
+        <br />
+
+
+        <style>
+            /*we can use css to show values*/
+            input[type=range]::before {
+                content: attr(min); 
+            }
+
+            input[type=range]::after {
+                content: attr(max); 
+            }
+            input[type=range] {
+                width:250px; 
+                color:blue;
+            }
+        </style>
+        <!-- range -->
+        <label for="range-input">Range:</label>
+        <p><a href="http://www.w3schools.com/jsref/dom_obj_range.asp">range documentation</a> for more attr, and methods</p>
+        <input type="range" id="range-input" min="1" max="10"/>
+        <br>
+
+        <!-- Sreach -->
+        <label for="search-data">Sreach:</label>
+        <input type="search" id="search-data" placeholder="Enter search term"/>
+        <br>
+
+        <!-- Telephone & required -->
+        <label for="tel-data">Telephone:</label>
+        <input type="tel" id="tel-data" required />
+        <br>
+
+        <!-- Email & Multiple-->
+        <label for="email-data">Email: </label>
+        <input type="email" id="email-data" required multiple />
+        <br>
+
+        <!-- Color -->
+        <label for="color-data">Color: </label>
+        <input type="color" id="color-data"/>
+        <br>
+
+        <!-- Data list -->
+        <label for="list-data">Data List:</label>
+        <input type="text" list="myDataList" id="list-data" />
+        <datalist id="myDataList">
+            <option label="Mr." value="Mr."></option>
+            <option label="Mrs." value="Mrs."></option>
+            <option label="Ms." value="Ms."></option>
+        </datalist>
+        <br>
+
+        <!-- Progress Bar -->
+        <label for="progress-data">Progress Bar: </label>
+        <progress value="5" max="15"></progress>
+        <br>
+
+        <!-- Meter - used to report status -->
+        <label for="progress-data">Progress Bar: </label>
+        <meter min="10" max="100" value="50" low="20" high="70" optimum="50"></meter>
+        <br>
+
+        <input type="submit" value="submit" />
+        <br>
+
+    </form>
+    <br>
+    <!-- form elements outside the form tags -->
+    <label for="outsideText-data">Other Text: </label>
+    <input type="text" id="outsideText-data" form="myform" />
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

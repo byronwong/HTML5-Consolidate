@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tables</title>
+    <link href="../CSS/base.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+</head>
+<body>
+    <nav id="main-nav"></nav>
+    <!-- Tables -->
+    <section>
+        <h1>Working with tables</h1>
+        <hr />
+        <style>
+            table, th, td {
+                border: 1px solid #333;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+            /* cells share their borders - default = "seperate" */
+            caption {
+                caption-side: bottom;
+            }
+            /* positions the capion */
+            col1 {
+                background-color: #999;
+            }
+            /* chnages the sytle of columns */
+            col2 {
+            }
+
+            col3 {
+            }
+        </style>
+        <table>
+            <caption>
+                Some Favorite Albums
+            </caption>
+            <colgroup>
+                <col class="col1" />
+                <col class="col2" />
+                <col class="col3" />
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th> Title </th>
+                    <th> Artist </th>
+                    <th> Comment </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Electric Ladyland </td>
+                    <td> Jimi Hendrix </td>
+                    <td> Revolutionary </td>
+                </tr>
+
+                <tr>
+                    <td> Revolver </td>
+                    <td> The Beatles </td>
+                    <td> Their best work. </td>
+                </tr>
+
+                <tr>
+                    <td> Apostrophe </td>
+                    <td> Frank Zappa </td>
+                    <td> Brilliant mix of rock and jazz. </td>
+                </tr>
+
+                <tr>
+                    <td> Birds of Fire </td>
+                    <td> Mahavishnu Orchestra </td>
+                    <td> The ultimate fusion album. </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td> Column 1</td>
+                    <td> Column 2 </td>
+                    <td> Column 3 </td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </section>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
